@@ -149,20 +149,11 @@ a:hover,
     gap: 2rem;
 }
 
-/*  Articles Home page - - -- */
-
 
 .h2-home {
     font-size: 40px;
+    margin-top: 2rem;
 }
-
-.articles img {
-    width: 75%;
-    height: auto;
-    border-radius: 5%;
-    object-fit: cover;
-}
-
 
 
 
@@ -175,9 +166,6 @@ a:hover,
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 
 .hero-about {
@@ -205,23 +193,15 @@ a:hover,
     border-radius: 50%;
 }
 
+/* About - Skills */
 
-/*  Experience about-me */
-
-.experience {
+.section-skills {
     display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
     height: auto;
+    width: 75%;
 
 }
-
-.experience h1 {
-    display: flex;
-    justify-content: center;
-}
-
-
 
 /*  About - Projects */
 
@@ -237,12 +217,10 @@ a:hover,
     text-align: center;
 }
 
-.section-about {
+.section-projects {
     display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
     height: auto;
-
 }
 
 .div-about {
@@ -258,6 +236,38 @@ a:hover,
     height: auto;
     border-radius: 5%;
     object-fit: cover;
+}
+
+/*  Contact page */
+
+section.hero-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.hero-contact p {
+    font-family: var(--header-font);
+    font-size: 22px;
+    color: var(--body-color);
+    width: 50%;
+}
+
+.section-contact {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    height: auto;
+
+}
+
+.div-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 /*  - -- - -- - Footer -- - -- -   */
@@ -288,13 +298,6 @@ footer p {
 
     a {
         font-size: 12px;
-    }
-}
-
-@media (min-width: 500px) {
-    .section-skills {
-        grid-template-columns: repeat(2, 1fr);
-
     }
 
 }
@@ -351,6 +354,11 @@ footer p {
 
     }
 
+    /* Contact Page */
 
-
+    .section-contact {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 50%;
+        height: auto;
+    }
 }
