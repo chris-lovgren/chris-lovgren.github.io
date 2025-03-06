@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Lovgren</title>
+    <title>Chris Lovgren - Backend developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-
 <body>
 
     <header id="header">
@@ -21,41 +20,40 @@
         <nav class="navbar">
             <ul class="nav-list">
 
-                <!-- Logo should link to Home -->
-
-                <li><a href="/Portfolio/home.html">Home</a></li>
-                <li><a href="/Portfolio/about.html">About</a></li>
-                <li><a href="/Portfolio/portfolio.html">Portfolio</a></li>
-                <li><a href="/Portfolio/contact.html">Contact</a></li>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- - -- -- - -- - - - - Navigation - -- - - -- - - -->
-
-
-
-    <main>
+    <main class="main-home">
 
         <div class="bg-wrapper">
             <section class="hero-section">
-                <h2 id="hero-text">Backend developer excited to start</h2>
+                <p id="hero-text">Backend developer excited to start</p>
             </section>
 
         </div>
 
+        <h2 class="h2-home">Get to know me!</h2>
 
-        <!-- Byt h2 mot div p och lägg till h2 "about me" -->
+        <section class="section-about section-projects">
 
-        <article class="articles" id="about-me"><img src="/Portfolio/images/skiing.jpg" alt="about me">
-            <h3><a href="/Portfolio/about.html">About me</a></h3>
-            <p>I love sports, design and coding. Get to know me!</p>
-        </article>
-        <article class="articles" id="background"><img src="/Portfolio/images/skiing.jpg" alt="my background">
-            <h3><a href="/Portfolio/">Background</a></h3>
-            <p>I have worked as a Product Owner, automations specialist and more. I have the experience to make your
-                next project top notch!</p>
-        </article>
+            <div class="div-about">
+                
+                <img class="about-image" src="/images/about-me-grey2.png" alt="About me">
+                <h2 class="h2-about"><a href="#">About me</a></h2>
+                <p>Get to know me better!</p>
+            </div>
+
+            <div class="div-about">
+                <img class="about-image" src="/images/johndough2.jpg" alt="johndough project">
+                <h2 class="h2-about"><a href="#">Portfolio</a></h2>
+                <p>Previous work</p>
+            </div>
+        </section>
 
     </main>
 

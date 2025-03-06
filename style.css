@@ -1,3 +1,9 @@
+:root {
+    --header-color: rgb(198, 98, 3);
+    --body-color: #333333;
+    --header-font: 'Bebas Neue', 'Impact', 'Arial Narrow', sans-serif;
+}
+
 /* Resetting CSS */
 
 * {
@@ -17,7 +23,7 @@ h4,
 h5,
 h6 {
     font-family: 'Bebas Neue', 'Impact', 'Arial Narrow', sans-serif;
-    color: rgb(198, 98, 3);
+    color: var(--header-color);
 }
 
 h1 {
@@ -35,7 +41,7 @@ button,
 input,
 textarea {
     font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
-    color: #333333;
+    color: var(--body-color);
     line-height: 1.5;
 }
 
@@ -47,10 +53,7 @@ a {
 /*  - --- -- -- - Header - - -- - - - - - - - */
 
 #header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 /* - - -- - - - -- -  Making body flexbox - -- - - -- - - - - */
@@ -60,47 +63,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
-
-/*  - -- - -- -- Making main flex:1 to push footer to the bottom - - -- - - */
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    gap: 2rem;
-}
-
-/*  - - -- - - - - Adding background to wrapper div - - -- - - -- - -  */
-
-.bg-wrapper {
-    background-image: url(/Portfolio/images/background-image-nobg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100vh;
-    z-index: -1;
-}
-
-/*  - - -- - --- -Hero section - -- - - -- - -  */
-
-.hero-section {
-    display: flex;
-    justify-content: center;
-    min-height: 50vh;
-    align-items: center;
-    margin: 10rem 1rem 0 1rem;
-
-}
-
-#hero-text {
-    font-size: 4rem;
-    color: rgb(198, 98, 3);
-}
-
 
 /*   - - -- - - -- Navbar - -- - - --- --  */
 
@@ -133,46 +95,193 @@ main {
 
 }
 
-a:hover {
-    color: #333333;
-    background-color: rgb(198, 98, 3);
-    border-radius: 5px;
-    padding: .5rem;
+a:hover,
+.navbar ul li a:hover {
+    color: var(--body-color);
+    text-decoration: underline;
+}
+
+/*  - - -- - - - - Adding background to wrapper div - - -- - - -- - -  */
+
+.bg-wrapper {
+    background-image: url(/images/background-image-nobg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  - - -- - --- -Hero section for overlay text over background image - -- - - -- - -  */
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+
+
+}
+
+#hero-text {
+    text-align: center;
+    font-family: 'Bebas Neue', 'Impact', 'Arial Narrow', sans-serif;
+    font-size: 5rem;
+    color: var(--header-color);
+    font-weight: bold;
 }
 
 
-/*  Articles */
 
-.articles {
+/*  - -- - -- -- Main Home - - -- - - */
+
+
+
+.main-home {
     display: flex;
     flex-direction: column;
-    width: 50vh;
-    height: auto;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 2rem;
+}
+
+/*  Articles Home page - - -- */
+
+
+.h2-home {
+    font-size: 40px;
 }
 
 .articles img {
-    border-radius: 10%;
+    width: 75%;
+    height: auto;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+
+
+
+/*  - -- - -- -- Main Aboutpage - - -- - - */
+
+.main-about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.hero-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-about p {
+    font-family: var(--header-font);
+    font-size: 22px;
+    color: var(--header-color);
+    width: 75%;
+    margin: 1rem 0 3rem 0;
+
+
+}
+
+/*  Profile img on about page  */
+
+.hero-about img {
+    width: 12rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/*  Experience about-me */
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+
+}
+
+.experience h1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*  About - Projects */
+
+.h1-about {
+    padding: 2rem;
+}
+
+.h2-about {
+    color: var(--body-color);
+}
+
+.hero-about p {
+    text-align: center;
+}
+
+.section-about {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+
+}
+
+.div-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.about-image {
+    width: 75%;
+    height: auto;
+    border-radius: 5%;
+    object-fit: cover;
 }
 
 /*  - -- - -- - Footer -- - -- -   */
 
 footer {
     display: flex;
-    justify-content: center;
-    background-color: rgb(209, 209, 209);
-    padding: 1rem 0rem 5rem 0rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #333333;
+    padding: 1rem 0rem 7rem 0rem;
+    width: 100%;
+    height: auto;
 }
 
 footer p {
+    color: white;
     font-size: 0.8rem;
+    margin-left: 2.5rem;
 
 }
 
-
 /*  - -- - --- -- - -- Media queries - - -- -- - --  */
 
-@media (max-width: 380px) {
+@media (max-width: 370px) {
     #hero-text {
         font-size: 2.8rem;
     }
@@ -180,6 +289,14 @@ footer p {
     a {
         font-size: 12px;
     }
+}
+
+@media (min-width: 500px) {
+    .section-skills {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -208,22 +325,32 @@ footer p {
     }
 
     .navbar ul li a {
-        color: #333333;
+        color: var(--body-color);
         font-weight: 600;
     }
 
     .articles h3 a {
-        color: #333333;
+        color: var(--body-color);
         font-weight: 600;
     }
 
-    main {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 3rem;
+    /*  about page */
+
+    .h2-about {
+        color: var(--body-color);
+
     }
+
+    .section-skills {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .section-projects {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
 
 }
