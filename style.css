@@ -2,6 +2,7 @@
     --header-color: rgb(198, 98, 3);
     --body-color: #333333;
     --header-font: 'Bebas Neue', 'Impact', 'Arial Narrow', sans-serif;
+    --body-font: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 /* Resetting CSS */
@@ -37,6 +38,7 @@ body,
 p,
 a,
 li,
+label,
 button,
 input,
 textarea {
@@ -238,37 +240,98 @@ a:hover,
     object-fit: cover;
 }
 
-/*  Contact page */
+/* - -- - - - - -- - - - --   Contact page - -- - - - - - -- -  */
 
-section.hero-contact {
+
+/* - - -- - - - - Form styling - - - -- - - - */
+
+
+
+.contact-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem;
 }
 
-section.hero-contact p {
-    font-family: var(--header-font);
-    font-size: 22px;
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    text-align: center;
     color: var(--body-color);
-    width: 50%;
+    margin-bottom: 3rem;
 }
 
-.section-contact {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+label {
+    font-family: var(--body-font);
+    display: block;
+    color: var(--body-color);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input,
+textarea {
     width: 100%;
-    height: auto;
-
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--body-color);
+    color: var(--body-color);
+    padding: 8px 0;
+    outline: none;
 }
 
-.div-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+input:focus,
+textarea:focus {
+    border-bottom: 1px solid var(--body-color)
 }
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* - - -- - --  Submit button styles - -- - - ---  */
+
+div.button {
+    width: 100%;
+    text-align: right;
+}
+
+.submit-btn {
+    background-color: transparent;
+    font-family: var(--body-font);
+    color: var(--header-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Orange underline effect */
+.submit-btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--header-color);
+}
+
 
 /*  - -- - -- - Footer -- - -- -   */
 
@@ -278,20 +341,18 @@ footer {
     justify-content: flex-start;
     background-color: #333333;
     padding: 1rem 0rem 7rem 0rem;
-    width: 100%;
     height: auto;
 }
 
 footer p {
     color: white;
-    font-size: 0.8rem;
     margin-left: 2.5rem;
 
 }
 
 /*  - -- - --- -- - -- Media queries - - -- -- - --  */
 
-@media (max-width: 370px) {
+@media (max-width: 360px) {
     #hero-text {
         font-size: 2.8rem;
     }
@@ -354,11 +415,9 @@ footer p {
 
     }
 
+
+
     /* Contact Page */
 
-    .section-contact {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 50%;
-        height: auto;
-    }
+
 }

@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8614edb61e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -28,48 +29,37 @@
         </nav>
     </header>
 
-    <main class="main-about">
-        <section class="hero-contact">
-            <p>I would love to hear about your project and how I could help. Please contact me in your most comfortable way, 
-                and I'll get back to you as soon as possible.
-            </p>
-        </section>
+    <main class="main-contact">
 
-        <h1 class="h1-about">Contact</h1>
+        <div class="contact-form">
+            <h1>Let's talk</h1>
+            <p class="intro-text">I would love to hear about your project and how I could help. Please fill in the form,
+                and I'll get back to you as soon as possible.</p>
 
-        <section class="section-contact">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <div class="div-contact">
-                <h2 class="h2-about">HTML</h2>
-                <p>1 year experience</p>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <div class="decorative-lines">
+
+                    </div>
+                </div>
+                <div class="button">
+
+                <button type="submit" class="submit-btn">Send Message</button>
             </div>
-            <div class="div-contact">
-                <h2 class="h2-about">CSS</h2>
-                <p>1 year experience</p>
-
-            </div>
-            <div class="div-contact">
-                <h2 class="h2-about">Agile Projects</h2>
-                <p>4 years experience</p>
-
-            </div>
-            <div class="div-contact">
-                <h2 class="h2-about">Javascript</h2>
-                <p>1 year experience</p>
-
-            </div>
-            <div class="div-contact">
-                <h2 class="h2-about">Javascript</h2>
-                <p>1 year experience</p>
-
-            </div>
-            <div class="div-contact">
-                <h2 class="h2-about">Javascript</h2>
-                <p>1 year experience</p>
-
-            </div>
-        </section>
+            </form>
+        </div>
 
 
     </main>
@@ -78,7 +68,7 @@
     <!--  - -- - --- - - -Footer - -- -- - - -- - - - ---   -->
 
     <footer>
-        <p>© 2025 Chris Lovgren. All rights reserved. </p>
+        <p>© 2025 Chris Lovgren</p>
     </footer>
 
 
