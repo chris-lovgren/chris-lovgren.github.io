@@ -49,7 +49,7 @@ textarea {
 
 /* - -- - - -- -  Anchor settings - -- -- -- -  */
 a {
-    transition: all 0.2s ease;
+    transition: all .3s ease;
 }
 
 /*  - --- -- -- - Header - - -- - - - - - - - */
@@ -157,6 +157,21 @@ a:hover,
     margin-top: 2rem;
 }
 
+.div-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.about-image {
+    max-width: 75%;
+    height: auto;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
 
 
 /*  - -- - -- -- Main Aboutpage - - -- - - */
@@ -167,6 +182,14 @@ a:hover,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/*  Profile img on about page  */
+
+.hero-about img {
+    width: 12rem;
+    height: auto;
+    border-radius: 50%;
 }
 
 
@@ -183,16 +206,12 @@ a:hover,
     color: var(--header-color);
     width: 75%;
     margin: 1rem 0 3rem 0;
-
-
 }
 
-/*  Profile img on about page  */
-
-.hero-about img {
-    width: 12rem;
+.section-home-about {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     height: auto;
-    border-radius: 50%;
 }
 
 /* About - Skills */
@@ -201,7 +220,6 @@ a:hover,
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     height: auto;
-    width: 75%;
 
 }
 
@@ -225,20 +243,7 @@ a:hover,
     height: auto;
 }
 
-.div-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
 
-.about-image {
-    width: 75%;
-    height: auto;
-    border-radius: 5%;
-    object-fit: cover;
-}
 
 /* - -- - - - - -- - - - --   Contact page - -- - - - - - -- -  */
 
@@ -337,16 +342,36 @@ div.button {
 
 footer {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     background-color: #333333;
     padding: 1rem 0rem 7rem 0rem;
     height: auto;
 }
 
+.contact-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#ul-footer {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+#ul-footer a {
+    color: white;
+    font-size: 30px;
+}
+
 footer p {
     color: white;
-    margin-left: 2.5rem;
+    font-size: .8rem;
 
 }
 
@@ -393,10 +418,15 @@ footer p {
         font-weight: 600;
     }
 
-    .articles h3 a {
-        color: var(--body-color);
-        font-weight: 600;
+    /*  Home page */
+
+    .section-home-about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        max-width: 75%;
     }
+
 
     /*  about page */
 
@@ -407,17 +437,44 @@ footer p {
 
     .section-skills {
         grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
 
     }
 
     .section-projects {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    /*  Footer  */
+
+    footer {
+        padding: 1rem 0rem 2rem 0rem;
+
+    }
+
+    .contact-footer {
+        flex-direction: row;
+        margin-right: 3rem;
+
+    }
+
+    #ul-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
 
     }
 
 
+    footer p {
+        color: white;
+        font-size: .8rem;
+        width: 50%;
+        margin-left: 3rem;
 
-    /* Contact Page */
+    }
 
 
 }
